@@ -25,3 +25,29 @@ Each Pays for Their Share: Each participant pays an amount proportionate to the 
 Record Contents:
 Atomic Information: Essential data needed to record the transaction.
 Derived Information: Information computed dynamically by the program (not stored).
+
+payer: payment_id PK, payer_id PK, percentage
+beneficiary: payment_id PK, beneficiary_id PK, percentage
+
+payment_id, user_id, type(ENUM payer or beneficiary), percentage
+
+Limit the number of payer as 1 for each payment?
+
+
+
+payer: A 40%, B 60%
+beneficiary: B 100%
+
+payer: A 40%， C 60%
+beneficiary: B 30%, C 50%, A 10%
+B->A 12; B->C 18;
+C->A 20; C->C 30;
+A->A 4; A->C 6;
+
+B->A, B->C, C->A （derived data）
+
+pay record
+
+repayment history: transfer from one beneficiary to one payer for a payment
+unsettled amount of each beneficiary: no data is stored, dynamically calculate the result.
+
