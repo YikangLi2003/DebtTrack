@@ -51,3 +51,23 @@ pay record
 repayment history: transfer from one beneficiary to one payer for a payment
 unsettled amount of each beneficiary: no data is stored, dynamically calculate the result.
 
+Java层面的数据库对接：
+
+初始化
+创建所有表
+
+增删查改
+
+添加新用户
+
+添加新支付记录以及用户分摊比例
+参与支付的用户必须是已经存在的用户
+
+删除用户
+该用户必须没有任何参与的payment
+
+删除支付记录
+将所有相关的payer和beneficiary都删除
+随后再删除支付记录的条目
+
+查找账单记录
