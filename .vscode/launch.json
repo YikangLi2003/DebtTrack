@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch with Arguments Prompt",
+            "request": "launch",
+            "mainClass": "io.github.yikangli2003.debttrack.Main",
+            "args": "${command:SpecifyProgramArgs}"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -14,8 +21,8 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
-            "mainClass": "Main",
-            "projectName": "DebtTrack_501fe617"
+            "mainClass": "io.github.yikangli2003.debttrack.Main",
+            "projectName": "debttrack"
         }
     ]
 }
